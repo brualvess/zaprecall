@@ -83,6 +83,7 @@ h1 {
     justify-content: center;
     margin-top: 20px;
     flex-direction: column;
+    margin-bottom: 100px;
 }
 
 .perguntas {
@@ -93,7 +94,7 @@ h1 {
     flex-direction: row;
     justify-content: space-between;
     margin-top: 10px;
-    width: 75%;
+    width: 80%;
     height: 60px;
     align-self: center;
 
@@ -120,11 +121,12 @@ h2 {
     background: #FFFFD5;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
-    width: 75%;
-    height: 90px;
+    width: 80%;
+    height: 160px;
     align-self: center;
     justify-content: space-between;
     margin-bottom: 10px;
+    margin-top: 10px
 }
 
 .renderPergunta {
@@ -134,9 +136,10 @@ h2 {
     font-size: 18px;
     margin-top: 10px;
     padding-left: 10px;
+    width:100%;
 }
 .iconePergunta{
-    padding-top: 50px;
+    padding-top: 110px;
     width: 60px;
     
     
@@ -149,4 +152,64 @@ h2 {
     margin-left: 10px;
     
 
+}
+.botoes{
+border-radius: 5px;
+width: 100%;
+height: 45px;
+margin-top: 30px;
+display: flex;
+justify-content: space-between;
+
+
+}
+.botaoText{
+color: #FFFFFF;
+font-family: 'Recursive';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+text-align: center;
+padding-top: 5px;
+width: 30%;
+
+
+}
+.vermelho{
+    background: #FF3030;
+}
+.laranja{
+   background: #FF922E;
+}
+.verde{
+    background: #2FBE34;
+
+}
+.p{
+    text-decoration: line-through;
+}
+.red{
+    color: #FF3030;
+}
+.orange{
+    color: #FF922E;
+}
+.green{
+    color:#2FBE34;
+}
+.rodape{
+background-color: #FFFFFF;
+width: 100%;
+height: 100px;
+position: fixed;
+bottom: 0;
+}
+.ok{
+color: black;
+font-family: 'Recursive';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+text-align: center;
+margin-top: 30px;
 }
