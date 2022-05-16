@@ -27,7 +27,10 @@ function ErrosAcertos(props) {
 function Perguntas(props) {
     const [mostrarPergunta, setMostrarPergunta] = React.useState("valor inicial")
 
-
+    function chamarContagem(valor){
+        props.contagem(valor)
+        setMostrarPergunta(valor)
+    }
 
     return (
         <>
@@ -51,9 +54,9 @@ function Perguntas(props) {
                                 <div className="renderPergunta">
                                     {props.resposta}
                                     <div className="botoes">
-                                        <div onClick={() => setMostrarPergunta("esqueceu")} className="botaoText vermelho"> Não <p />lembrei</div>
-                                        <div onClick={() => setMostrarPergunta("quase")} className="botaoText laranja "> Quase não <p />lembrei</div>
-                                        <div onClick={() => setMostrarPergunta("lembrou")} className="botaoText verde ">Zap!</div>
+                                        <div onClick={() => chamarContagem("esqueceu")} className="botaoText vermelho"> Não <p />lembrei</div>
+                                        <div onClick={() => chamarContagem("quase")} className="botaoText laranja "> Quase não <p />lembrei</div>
+                                        <div onClick={() => chamarContagem("lembrou")} className="botaoText verde ">Zap!</div>
                                     </div>
                                 </div>
                             </div>
@@ -68,7 +71,7 @@ function Perguntas(props) {
 
 }
 export default function Tela2() {
-
+const [contagem, setContagem]=React.useState([])
     const perguntas = [
         {
             pergunta: "O que é JSX?",
@@ -103,14 +106,21 @@ export default function Tela2() {
             resposta: " uma biblioteca JavaScript para construção de interfaces"
         },
     ]
+
+    function adicionarNoArray (value){
+        const novoArray =[...contagem, value]
+        setContagem(novoArray)
+    }
+
     perguntas.sort(comparador)
     return (
         <>
             <Topo />
             <div className="containerDePerguntas">
-                {perguntas.map((pergunta, index) => <Perguntas numero={index + 1} questao={pergunta.pergunta} resposta={pergunta.resposta} />)}
+                {perguntas.map((pergunta, index) => <Perguntas numero={index + 1} questao={pergunta.pergunta} resposta={pergunta.resposta} 
+                 contagem = {adicionarNoArray} />)}
             </div>
-            <Rodape />
+            <Rodape contagem = {contagem}/>
         </>
     )
 }
