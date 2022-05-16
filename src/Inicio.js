@@ -1,4 +1,4 @@
- 
+
 import { Link } from "react-router-dom";
 import React from 'react'
 export default function Boasvindas() {
@@ -10,9 +10,9 @@ export default function Boasvindas() {
             <img className="logo" src="imagens/logo.png" />
             <div className="subtitulo">ZapRecall</div>
             <Link className="buttoniniciar" to="/perguntas">
-              
-                    <div className="textCaixinha">Iniciar Recall!</div>
-        
+
+                <div className="textCaixinha">Iniciar Recall!</div>
+
             </Link>
         </div>
 

@@ -108,7 +108,7 @@ const [contagem, setContagem]=React.useState([])
     ]
 
     function adicionarNoArray (value){
-        const novoArray =[...contagem, value]
+        const novoArray =[...contagem, value,]
         setContagem(novoArray)
     }
 
